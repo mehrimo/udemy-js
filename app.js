@@ -1,22 +1,16 @@
 'use strict';
 
-var me = {
-  firstname:'Mehri',
-  lastname: 'Russo',
-  address: {
-    street: 'APT C',
-    city: 'Boulder',
-    state: 'CO'
-  }
-};
+var myArray = ["Jack", "John", "Mike", "Dana"];
+myArray.sort();
 
-function greet(person) {
-  console.log('Hi ' + person.firstname);
+function sortNames(myArray) {
+  var result = [];
+
+for (var i = 0; i < myArray.length; i++) {
+  result.push(myArray[i][0].toUpperCase() + myArray[i].slice(1));
 }
+result.sort();
+return result;
 
-greet(me);
-
-greet({
-  firstname: 'Jack',
-  lastname: 'Russo'
-});
+}
+console.log(sortNames());
